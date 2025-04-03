@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukumar Bandreddi - Director | Producer | Screenwriter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sukumar Bandreddi</h1>
+            <p>Director | Producer | Screenwriter</p>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#filmography">Filmography</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>
+            <p>Sukumar Bandreddi, born on January 11, 1971, in Razole, Andhra Pradesh, India, is a prominent Indian film director, producer, and screenwriter known for his work in Telugu cinema. He gained recognition with his directorial debut "Arya" in 2004, which was both a critical and commercial success. Over the years, Sukumar has been acclaimed for his unique storytelling and innovative direction.</p>
+        </div>
+    </section>
+    <section id="filmography">
+        <div class="container">
+            <h2>Filmography</h2>
+            <ul>
+                <li><strong>Arya</strong> (2004) - Director</li>
+                <li><strong>Jagadam</strong> (2007) - Director</li>
+                <li><strong>Arya 2</strong> (2009) - Director</li>
+                <li><strong>100% Love</strong> (2011) - Director</li>
+                <li><strong>1: Nenokkadine</strong> (2014) - Director</li>
+                <li><strong>Nannaku Prematho</strong> (2016) - Director</li>
+                <li><strong>Rangasthalam</strong> (2018) - Director</li>
+                <li><strong>Pushpa: The Rise</strong> (2021) - Director</li>
+                <li><strong>Pushpa 2: The Rule</strong> (2024) - Director</li>
+            </ul>
+        </div>
+    </section>
+    <section id="awards">
+        <div class="container">
+            <h2>Awards</h2>
+            <ul>
+                <li>Filmfare South Award for Best Director - Telugu for "Arya" (2004)</li>
+                <li>Nandi Award for Best Screenplay Writer for "Arya" (2004)</li>
+                <li>Filmfare Award for Best Director - Telugu for "Rangasthalam" (2018)</li>
+                <li>Sakshi Excellence Award for Best Director for "Pushpa: The Rise" (2021)</li>
+            </ul>
+        </div>
+    </section>
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="arya.jpg" alt="Arya">
+                <img src="rangasthalam.jpg" alt="Rangasthalam">
+                <img src="pushpa.jpg" alt="Pushpa: The Rise">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>For professional inquiries, please contact via email: <a href="mailto:contact@sukumar.com">contact@sukumar.com</a></p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sukumar Bandreddi. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    background: #444;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+section {
+    padding: 20px 0;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 30%;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetSection.offsetTop - 50,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
